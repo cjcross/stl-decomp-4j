@@ -2,6 +2,7 @@
 
 [![travis-ci-status](https://travis-ci.org/ServiceNow/stl-decomp-4j.svg?branch=master)](https://travis-ci.org/ServiceNow/stl-decomp-4j)
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fcjcross%2Fstl-decomp-4j.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Fcjcross%2Fstl-decomp-4j?ref=badge_shield)
 
 The Seasonal-Trend-Loess (STL) algorithm decomposes a time series into seasonal, trend and residual components. The algorithm uses [Loess interpolation](https://en.wikipedia.org/wiki/Local_regression) (original paper [here](http://www.stat.washington.edu/courses/stat527/s13/readings/Cleveland_JASA_1979.pdf)) to smooth the cyclic sub-series (e.g. all January values in the CO<sub>2</sub> data shown in the example below). After removing the seasonality from the signal, the remainder is smoothed (in multiple steps) to find the trend. This process is repeated and may include robustness iterations that take advantage of the weighted-least-squares underpinnings of Loess to remove the effects of outliers. The details are described in [STL: A Seasonal-Trend Decomposition Procedure Based on Loess](http://www.wessa.net/download/stl.pdf).   
 
@@ -61,3 +62,7 @@ The **_stl-decomp-4j_** implementation has no external dependencies.
 The unit tests depend on `junit`, `commons-math3` and `slf4j-simple`.
 
 The examples have further dependencies on `commons-cli`, `opencsv`, `spark-core`, and `jackson-mapper-asl`.
+
+
+## License
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fcjcross%2Fstl-decomp-4j.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Fcjcross%2Fstl-decomp-4j?ref=badge_large)
